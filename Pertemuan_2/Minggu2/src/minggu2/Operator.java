@@ -9,7 +9,7 @@ package minggu2;
  * @author rivan
  */
 public class Operator {
-    Class FloatingPoint{
+    class Floatingoint{
         public static void main(String[] args) {
             double x = 92.98; 
             int nx = (int) Math.round(x);
