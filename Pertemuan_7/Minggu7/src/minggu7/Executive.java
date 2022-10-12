@@ -10,17 +10,25 @@ package minggu7;
  */
 public class Executive extends Employee {
     private double bonus;
+    private int extraVacation = 0;
     
-    //Set up an executive with the specified information
-    public Executive(String eName, String eAddress, String ePhone
-                    String socSecNumber, double rate) {
+    public Executive(String eName, String eAddress, String ePhone,
+            String socSecNumber, double rate) {
         super(eName, eAddress, ePhone, socSecNumber, rate);
         bonus = 0; //bonus has yet to be awarded
+    }
+    
+    //Set up an executive with the specified information
+    public Executive(String eName, String eAddress, String ePhone,
+            String socSecNumber, double rate, int compVacation) {
+        super(eName, eAddress, ePhone, socSecNumber, rate);
+        bonus = 0; //bonus has yet to be awarded
+        extraVacation = compVacation;
     }
                     
     //Awards the specified bonus to this executive 
     public void awardBonus(double execBonus) {
-        bonus = exeBonus;
+        bonus = execBonus;
     }
     
     //Computes anf return the pay for an executive, which is the

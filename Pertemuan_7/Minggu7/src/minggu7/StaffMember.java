@@ -8,19 +8,22 @@ package minggu7;
  *
  * @author rivan
  */
-public class StaffMember {
+public abstract class StaffMember{
     protected String name;
     protected String address;
     protected String phone;
+    protected double rate;
     
     //Set up a staff member using the specified information
-    public StaffMember(String eName, String eAddress, String ePhone) {
+    public StaffMember(String eName, String eAddress, String ePhone, double rate) {
         name = eName;
         address = eAddress;
         phone = ePhone;
+        rate = rate;
     }
     
    //Returns a string including the basic employee information
+    @Override
    public String toString() {
        String result = "Name: " + name + " \n";
        

@@ -11,17 +11,19 @@ package minggu7;
 public class Employee extends StaffMember {
     protected String socialSecurityNumber;
     protected double payRate;
+    protected final int STANDARD_VACATION = 14;
     
     //Set up an employee with the specified information
     public Employee(String eName, String eAddress, String ePhone, 
                     String socSecNumber, double rate) {
-        super(eName, eAddress, ePhone);
+        super(eName, eAddress, ePhone, rate);
         
         socialSecurityNumber = socSecNumber;
         payRate = rate;
     }
     
     //Returns information about an employee as a string 
+    @Override
     public String toString() {
         String result = super.toString();
         result += "\nSocial Security Number: " + socialSecurityNumber;
@@ -29,6 +31,7 @@ public class Employee extends StaffMember {
     }
     
     //Returs the pau rate for this employee
+    @Override
     public double pay() {
         return payRate;
     }
